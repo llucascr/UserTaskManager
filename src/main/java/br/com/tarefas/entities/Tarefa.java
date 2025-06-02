@@ -1,4 +1,4 @@
-package br.com.tarefas;
+package br.com.tarefas.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
