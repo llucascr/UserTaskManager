@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: UserTaskManager
+  jpa:
+    show-sql: true # ativa os logs de sql no terminal
+    properties:
+      hibernate:
+        default_schema: mysql-database
+    generate-ddl: true
+    hibernate:
+      ddl-auto: validate
+    open-in-view: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/mysql-database?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true

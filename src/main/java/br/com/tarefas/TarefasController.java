@@ -16,7 +16,7 @@ public class TarefasController {
     private TafefaRepository repository;
 
     @GetMapping("{id}")
-    public ResponseEntity<Tarefa> recuperarTarefa(@PathVariable Long id) {
+    public ResponseEntity<  Tarefa> recuperarTarefa(@PathVariable Long id) {
         Optional<Tarefa> tarefa = repository.findById(id);
         return tarefa.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
